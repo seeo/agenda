@@ -12,7 +12,9 @@
         },
         "categories": {
             "auth": {
-                "agenda5e5589e2": {}
+                "agenda5e5589e2": {
+                    "hostedUIProviderCreds": "[]"
+                }
             }
         }
     }

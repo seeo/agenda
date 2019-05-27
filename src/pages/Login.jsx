@@ -1,9 +1,15 @@
 import React, { Component } from 'react';
 
+import { Authenticator } from 'aws-amplify-react';
+
+
 class Login extends Component {
   render() {
     return (
-      <h1>Login</h1>
+    <div>
+        <Authenticator />
+        <h1>Login</h1>
+    </div>
     )
   }
 }

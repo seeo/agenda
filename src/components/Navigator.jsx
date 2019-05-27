@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {Navbar, Nav, Dropdown, Form, Button, FormControl} from 'react-bootstrap';
 import {Route, Switch, BrowserRouter as Router} from 'react-router-dom';
+import {SignOut} from 'aws-amplify-react';
 
 const HomeItems = props =>(
     <React.Fragment>

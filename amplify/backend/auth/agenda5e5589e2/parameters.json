@@ -23,7 +23,12 @@
     "emailVerificationMessage": "Your verification code is {####}",
     "defaultPasswordPolicy": false,
     "passwordPolicyMinLength": 8,
-    "passwordPolicyCharacters": [],
+    "passwordPolicyCharacters": [
+        "Requires Lowercase",
+        "Requires Uppercase",
+        "Requires Numbers",
+        "Requires Symbols"
+    ],
     "requiredAttributes": [
         "email",
         "name"
@@ -32,10 +37,17 @@
     "userpoolClientGenerateSecret": true,
     "userpoolClientRefreshTokenValidity": 30,
     "userpoolClientWriteAttributes": [
-        "email"
+        "email",
+        "name"
     ],
     "userpoolClientReadAttributes": [
-        "email"
+        "address",
+        "birthdate",
+        "email",
+        "name",
+        "phone_number",
+        "picture",
+        "profile"
     ],
     "mfaLambdaRole": "agenda5e5589e2_totp_lambda_role",
     "mfaLambdaLogPolicy": "agenda5e5589e2_totp_lambda_log_policy",
@@ -65,8 +77,16 @@
             "Arn"
         ]
     },
-    "useDefault": "default",
+    "useDefault": "manual",
     "usernameAttributes": [
         "email"
-    ]
+    ],
+    "thirdPartyAuth": false,
+    "hostedUI": true,
+    "hostedUIDomainName": "agenda8d07af38-8d07af38",
+    "authProvidersUserPool": [],
+    "hostedUIProviderMeta": "[]",
+    "addCallbackOnUpdate": false,
+    "addLogoutOnUpdate": false,
+    "oAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"http://localhost:3000/signin/\"],\"LogoutURLs\":[\"http://localhost:3000/signout/\"]}"
 }
