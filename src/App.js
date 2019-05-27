@@ -98,5 +98,4 @@ export default withAuthenticator(App, {
     signInConfig,
     signUpConfig,
     // Render a sign out button once logged in
-    includeGreetings: true,
 });

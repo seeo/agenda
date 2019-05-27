@@ -32,6 +32,10 @@ class Navigator extends Component {
     return (
         <Navbar expand = "md" bg="dark" variant="dark" fixed = "top">
             <Navbar.Brand href="#">Agenda</Navbar.Brand>
+            <Form inline>
+                <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+                <Button variant="outline-info">Search</Button>
+            </Form>
             <Navbar.Toggle aria-controls = "navbarExampleDefault" />
             <Navbar.Collapse id="navbarExampleDefault">
                 <Nav className="mr-auto">
@@ -39,14 +43,10 @@ class Navigator extends Component {
                     <Nav.Link href="#features">Features</Nav.Link>
                     <Nav.Link href="#pricing">Pricing</Nav.Link>
                 </Nav>
-            <Form inline>
-                <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-                <Button variant="outline-info">Search</Button>
-            </Form>
-            </Navbar.Collapse>
+
             <Nav className="drop-down">
                 <Dropdown>
-                    <Dropdown.Toggle variant="success" id="dropdown-basic">
+                    <Dropdown.Toggle variant="dark" id="dropdown-basic">
                         Account
                         </Dropdown.Toggle>
                     <Dropdown.Menu>
@@ -55,14 +55,16 @@ class Navigator extends Component {
                     </Dropdown.Menu>
                 </Dropdown>;
             </Nav>
+            </Navbar.Collapse>
+          <SignOut />
+            {/*
                 <Router>
                     <Switch>
                         <Route exact path="/" component={HomeItems} />
                         <Route exact path="/login" component={LoginItems} />
                     </Switch>
                 </Router>
-
-
+            */}
         </Navbar>
     )
   }
