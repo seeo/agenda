@@ -1,18 +1,24 @@
 import React, { Component } from 'react';
 import { Container} from 'react-bootstrap';
+import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
+import Home from '../pages/Home';
+import Login from '../pages/Login';
 
-export default class Main extends Component {
+class Main extends Component {
   render() {
     return (
       <Container as="main" role="main">
         <div className="starter-template">
-          <h1>Bootstrap starter template</h1>
-          <h4>
-            Use this document as a way to quickly start any new project.<br />
-            All you get is this text and a mostly barebones HTML document.
-          </h4>
+         <Router>
+            <Switch>
+                <Route exact path="/" component={Home} />
+                <Route exact path="/login" component={Login} />
+            </Switch>
+         </Router>
         </div>
       </Container>
     )
   }
 }
+
+export default Main;

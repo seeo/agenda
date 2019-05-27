@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import {Navbar, Nav, Dropdown, Form, Button, FormControl} from 'react-bootstrap';
-import {HashRouter, Route, Switch} from 'react-router-dom';
-import {BrowserRouter as Router} from 'react-router-dom';
+import {Route, Switch, BrowserRouter as Router} from 'react-router-dom';
 
 const HomeItems = props =>(
     <React.Fragment>
@@ -9,7 +8,7 @@ const HomeItems = props =>(
             Home
         {/*<BSpan srOnly>(current}</BSpan>*/}
         </Nav.Link>
-        <Nav.Link href="#/" active>
+        <Nav.Link href="#/login" active>
             Login
         </Nav.Link>
     </React.Fragment>
@@ -44,10 +43,6 @@ class Navigator extends Component {
                 <Button variant="outline-info">Search</Button>
             </Form>
             </Navbar.Collapse>
-
-            <Router>
-
-            {/*Case where user is signed in*/}
             <Nav className="drop-down">
                 <Dropdown>
                     <Dropdown.Toggle variant="success" id="dropdown-basic">
@@ -56,15 +51,16 @@ class Navigator extends Component {
                     <Dropdown.Menu>
                         <Dropdown.Item href="#/action-1">Profile</Dropdown.Item>
                         <Dropdown.Item href="#/action-2">Settings</Dropdown.Item>
-                        <Dropdown.Item href="#/action-3">Logout</Dropdown.Item>
                     </Dropdown.Menu>
                 </Dropdown>;
             </Nav>
+                <Router>
+                    <Switch>
+                        <Route exact path="/" component={HomeItems} />
+                        <Route exact path="/login" component={LoginItems} />
+                    </Switch>
+                </Router>
 
-            {/*Case where user is signed out*/}
-
-
-            </Router>
 
         </Navbar>
     )
