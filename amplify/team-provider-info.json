@@ -1,0 +1,19 @@
+{
+    "test": {
+        "awscloudformation": {
+            "AuthRoleName": "agenda-test-20190527180107-authRole",
+            "UnauthRoleArn": "arn:aws:iam::629539167673:role/agenda-test-20190527180107-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::629539167673:role/agenda-test-20190527180107-authRole",
+            "Region": "ap-southeast-1",
+            "DeploymentBucketName": "agenda-test-20190527180107-deployment",
+            "UnauthRoleName": "agenda-test-20190527180107-unauthRole",
+            "StackName": "agenda-test-20190527180107",
+            "StackId": "arn:aws:cloudformation:ap-southeast-1:629539167673:stack/agenda-test-20190527180107/58aa0df0-8066-11e9-a7a0-0a7a5dd66442"
+        },
+        "categories": {
+            "auth": {
+                "agenda5e5589e2": {}
+            }
+        }
+    }
+}

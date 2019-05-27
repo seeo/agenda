@@ -3,6 +3,9 @@ import React, { Component } from 'react';
 import { Navigator, Main } from './components';
 import './App.css';
 
+import Amplify from 'aws-amplify';
+
+
 class App extends Component {
   render() {
     return (

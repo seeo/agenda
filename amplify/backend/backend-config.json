@@ -1,0 +1,8 @@
+{
+	"auth": {
+		"agenda5e5589e2": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation"
+		}
+	}
+}
