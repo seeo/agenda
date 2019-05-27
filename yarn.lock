@@ -2064,6 +2064,19 @@ boolbase@^1.0.0, boolbase@~1.0.0:
   resolved "https://registry.yarnpkg.com/boolbase/-/boolbase-1.0.0.tgz#68dff5fbe60c51eb37725ea9e3ed310dcc1e776e"
   integrity sha1-aN/1++YMUes3cl6p4+0xDcwed24=
 
+bootstrap-4-react@^0.0.58:
+  version "0.0.58"
+  resolved "https://registry.yarnpkg.com/bootstrap-4-react/-/bootstrap-4-react-0.0.58.tgz#fc706b97158a94aee25e78840f27a85dc4d0cf94"
+  integrity sha512-2xhDJmLN32VqDaW65IRdQ7iGDihNTdePg8zjKPi28CByn3DND2XGnntrSsVO8yHodHsVWL4eL4LEUtHuLBuMJA==
+  dependencies:
+    bootstrap-4-required "0.0.1"
+    fsts "0.0.44"
+
+bootstrap-4-required@0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/bootstrap-4-required/-/bootstrap-4-required-0.0.1.tgz#9fba02588dcd2b743201161f19f973409644e8b4"
+  integrity sha512-4S6Trn9pRVSR756GRYr3hy2cZL3Vc0tw0/H9E+mbNeOR+4tn6CeRgcLx0YqZmL2XlabtEV73+XAesmwkgTDKvQ==
+
 brace-expansion@^1.1.7:
   version "1.1.11"
   resolved "https://registry.yarnpkg.com/brace-expansion/-/brace-expansion-1.1.11.tgz#3c7fcbf529d87226f3d2f52b966ff5271eb441dd"
@@ -4134,6 +4147,11 @@ fsevents@^1.2.7:
   dependencies:
     nan "^2.12.1"
     node-pre-gyp "^0.12.0"
+
+fsts@0.0.44:
+  version "0.0.44"
+  resolved "https://registry.yarnpkg.com/fsts/-/fsts-0.0.44.tgz#5fd58e767edd542c7f8e5c8a3b0a7d2eea3bd328"
+  integrity sha512-0U4qvbzOE+3s2711DdszIyaAnZ3M0dbFAhnkez/ITy31MwzDI2lepGSkVeFOyx6jqWvwaSZr01RP4hdM4I8wxQ==
 
 function-bind@^1.1.1:
   version "1.1.1"
@@ -7846,7 +7864,7 @@ react-dev-utils@^9.0.1:
     strip-ansi "5.2.0"
     text-table "0.2.0"
 
-react-dom@16.8.6:
+react-dom@^16.8.6:
   version "16.8.6"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.8.6.tgz#71d6303f631e8b0097f56165ef608f051ff6e10f"
   integrity sha512-1nL7PIq9LTL3fthPqwkvr2zY7phIPjYrT0jp4HjyEQrEROnw4dG41VVwi/wfoCneoleqrNX7iAD+pXebJZwrwA==
@@ -7926,7 +7944,7 @@ react-scripts@3.0.1:
   optionalDependencies:
     fsevents "2.0.6"
 
-react@16.8.6:
+react@^16.8.6:
   version "16.8.6"
   resolved "https://registry.yarnpkg.com/react/-/react-16.8.6.tgz#ad6c3a9614fd3a4e9ef51117f54d888da01f2bbe"
   integrity sha512-pC0uMkhLaHm11ZSJULfOBqV4tIZkx87ZLvbbQYunNixAAvjnC+snJCg0XQXn9VIsttVsbZP/H/ewzgsd5fxKXw==
