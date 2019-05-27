@@ -5,11 +5,11 @@ import {SignOut} from 'aws-amplify-react';
 
 const HomeItems = props =>(
     <React.Fragment>
-        <Nav.Link href="#/" active>
+        <Nav.Link href="/" active>
             Home
         {/*<BSpan srOnly>(current}</BSpan>*/}
         </Nav.Link>
-        <Nav.Link href="#/login" active>
+        <Nav.Link href="/login">
             Login
         </Nav.Link>
     </React.Fragment>
@@ -17,13 +17,13 @@ const HomeItems = props =>(
 
 const LoginItems = props =>(
     <React.Fragment>
-        <Nav.ItemLink href="#/">
+        <Nav.Link href="/">
             Home
-    </Nav.ItemLink>
-        <Nav.ItemLink href="#/login" active>
+        </Nav.Link>
+        <Nav.Link href="/login" active>
             Login
         {/*<BSpan srOnly>(current}</BSpan>*/}
-        </Nav.ItemLink>
+        </Nav.Link>
     </React.Fragment>
 )
 
@@ -38,33 +38,17 @@ class Navigator extends Component {
             </Form>
             <Navbar.Toggle aria-controls = "navbarExampleDefault" />
             <Navbar.Collapse id="navbarExampleDefault">
-                <Nav className="mr-auto">
-                    <Nav.Link href="#home">Home</Nav.Link>
-                    <Nav.Link href="#features">Features</Nav.Link>
-                    <Nav.Link href="#pricing">Pricing</Nav.Link>
+                <Nav mr = "auto">
+                    <Router>
+                        <Switch>
+                            <Route exact path="/" component={HomeItems} />
+                            <Route exact path="/login" component={LoginItems} />
+                        </Switch>
+                    </Router>
                 </Nav>
-
-            <Nav className="drop-down">
-                <Dropdown>
-                    <Dropdown.Toggle variant="dark" id="dropdown-basic">
-                        Account
-                        </Dropdown.Toggle>
-                    <Dropdown.Menu>
-                        <Dropdown.Item href="#/action-1">Profile</Dropdown.Item>
-                        <Dropdown.Item href="#/action-2">Settings</Dropdown.Item>
-                    </Dropdown.Menu>
-                </Dropdown>;
-            </Nav>
+                <Navbar.Text>Greetings</Navbar.Text>
+                <SignOut />
             </Navbar.Collapse>
-          <SignOut />
-            {/*
-                <Router>
-                    <Switch>
-                        <Route exact path="/" component={HomeItems} />
-                        <Route exact path="/login" component={LoginItems} />
-                    </Switch>
-                </Router>
-            */}
         </Navbar>
     )
   }

@@ -94,8 +94,10 @@ const signUpConfig = {
     ]
 };
 
-export default withAuthenticator(App, {
-    signInConfig,
-    signUpConfig,
-    // Render a sign out button once logged in
-});
+export default App;
+
+// withAuthenticator(App, {
+//     signInConfig,
+//     signUpConfig,
+//     // Render a sign out button once logged in
+// });

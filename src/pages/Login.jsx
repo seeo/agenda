@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-
 import { Authenticator } from 'aws-amplify-react';
-
 
 class Login extends Component {
   render() {
