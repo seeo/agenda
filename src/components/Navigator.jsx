@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {
-  Navbar,Nav,Dropdown,Form,Button, FormControl} from 'react-bootstrap';
+  Navbar, Nav, Dropdown, Form, Button, FormControl} from 'react-bootstrap';
 
 export default class Navigator extends Component {
   render() {
@@ -11,6 +11,18 @@ export default class Navigator extends Component {
                 <Nav.Link href="#home">Home</Nav.Link>
                 <Nav.Link href="#features">Features</Nav.Link>
                 <Nav.Link href="#pricing">Pricing</Nav.Link>
+            </Nav>
+            <Nav className = "drop-down">
+                <Dropdown>
+                    <Dropdown.Toggle variant="success" id="dropdown-basic">
+                        Dropdown
+                    </Dropdown.Toggle>
+                    <Dropdown.Menu>
+                        <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+                        <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+                        <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                    </Dropdown.Menu>
+                </Dropdown>;
             </Nav>
             <Form inline>
                 <FormControl type="text" placeholder="Search" className="mr-sm-2" />
