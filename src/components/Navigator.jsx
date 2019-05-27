@@ -1,12 +1,6 @@
 import React, { Component } from 'react';
 import {
-  Navbar,
-  Nav,
-  Dropdown,
-  Form,
-  Button,
-  FormControl,
-} from 'react-bootstrap';
+  Navbar,Nav,Dropdown,Form,Button, FormControl} from 'react-bootstrap';
 
 export default class Navigator extends Component {
   render() {
