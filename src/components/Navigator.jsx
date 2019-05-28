@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
-import {Navbar, Nav, Dropdown, Form, Button, FormControl} from 'react-bootstrap';
+import {Navbar, Nav, Form, Button, FormControl} from 'react-bootstrap';
 import {Route, Switch, BrowserRouter as Router} from 'react-router-dom';
-import {SignOut, Greetings} from 'aws-amplify-react';
+// import {SignOut, Greetings} from 'aws-amplify-react';
+import JSignOut from './auth/JSignOut';
+import { Hub, Auth } from 'aws-amplify';
 
 const HomeItems = props =>(
     <React.Fragment>
         <Nav.Link href="/" active>
             Home
-        {/*<BSpan srOnly>(current}</BSpan>*/}
         </Nav.Link>
         <Nav.Link href="/login">
             Login
@@ -22,15 +23,32 @@ const LoginItems = props =>(
         </Nav.Link>
         <Nav.Link href="/login" active>
             Login
-        {/*<BSpan srOnly>(current}</BSpan>*/}
         </Nav.Link>
     </React.Fragment>
 )
 
 class Navigator extends Component {
+    constructor(props) {
+        super(props);
+        this.loadUser = this.loadUser.bind(this);
+        Hub.listen('auth', this, 'Navigator'); // Add this component as listener of auth event.
+        this.state = { user: null }
+    }
 
+    componentDidMount() {
+        this.loadUser(); //check user's loggedin state just before page renders
+    }
 
+    loadUser() {
+        Auth.currentAuthenticatedUser()
+            .then(user => this.setState({ user: user }))
+            .catch(error => this.setState({ user: null }));
+    }
 
+    // Hub.listen('auth', this.loadUser); this is prefferable because onHubCapsule is being deprecated already
+    onHubCapsule(capsule) {
+        this.loadUser(); //this triggers every time user signs in and signs out
+    }
 
   render() {
     return (
@@ -51,8 +69,8 @@ class Navigator extends Component {
                     </Router>
                 </Nav>
                 <Navbar.Text>Greetings</Navbar.Text>
-                <SignOut />
-
+                {/*<SignOut /> */}
+                {this.user && <JSignOut />}
             </Navbar.Collapse>
         </Navbar>
     )
