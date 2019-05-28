@@ -5,12 +5,29 @@ import {Route, Switch, BrowserRouter as Router} from 'react-router-dom';
 import JSignOut from './auth/JSignOut';
 import { Hub, Auth } from 'aws-amplify';
 
-const HomeItems = props =>(
+const ProfileItems = props =>(
     <React.Fragment>
-        <Nav.Link href="/" active>
+        <Nav.Link href = "/">
             Home
         </Nav.Link>
-        <Nav.Link href="/login">
+        <Nav.Link href = "/profile" active>
+            Profile
+        </Nav.Link>
+        <Nav.Link href = "/login">
+            Login
+        </Nav.Link>
+    </React.Fragment>
+)
+
+const HomeItems = props =>(
+    <React.Fragment>
+        <Nav.Link href = "/" active>
+            Home
+        </Nav.Link>
+        <Nav.Link href="/profile">
+            Profile
+        </Nav.Link>
+        <Nav.Link href = "/login">
             Login
         </Nav.Link>
     </React.Fragment>
@@ -18,10 +35,13 @@ const HomeItems = props =>(
 
 const LoginItems = props =>(
     <React.Fragment>
-        <Nav.Link href="/">
+        <Nav.Link href = "/">
             Home
         </Nav.Link>
-        <Nav.Link href="/login" active>
+        <Nav.Link href="/profile">
+            Profile
+        </Nav.Link>
+        <Nav.Link href = "/login" active>
             Login
         </Nav.Link>
     </React.Fragment>
@@ -65,6 +85,7 @@ class Navigator extends Component {
                         <Switch>
                             <Route exact path="/" component={HomeItems} />
                             <Route exact path="/login" component={LoginItems} />
+                            <Route exact path="/profile" component={ProfileItems} />
                         </Switch>
                     </Router>
                 </Nav>

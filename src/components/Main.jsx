@@ -3,12 +3,15 @@ import { Container} from 'react-bootstrap';
 import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
 import Home from '../pages/Home';
 import Login from '../pages/Login';
+import Profile from '../pages/Profile'
 
 class Main extends Component {
 
     constructor(props) {
         super(props);
-        this.state = { user: null }
+        this.state = {
+            user: null
+        }
     }
 
   render() {
@@ -24,6 +27,9 @@ class Main extends Component {
                 {/*<Route exact path="/" component={Home} />*/}
                 <Route exact path="/"
                 render={(props) => <Home user={this.user} />}
+                />
+                <Route exact path="/profile"
+                render={(props) => <Profile user={this.user} />}
                 />
                 {/*<Route exact path="/login" component={Login} /> */}
                 <Route exact path="/login"
