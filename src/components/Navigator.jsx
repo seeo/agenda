@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {Navbar, Nav, Dropdown, Form, Button, FormControl} from 'react-bootstrap';
 import {Route, Switch, BrowserRouter as Router} from 'react-router-dom';
-import {SignOut} from 'aws-amplify-react';
+import {SignOut, Greetings} from 'aws-amplify-react';
 
 const HomeItems = props =>(
     <React.Fragment>
@@ -28,6 +28,10 @@ const LoginItems = props =>(
 )
 
 class Navigator extends Component {
+
+
+
+
   render() {
     return (
         <Navbar expand = "md" bg="dark" variant="dark" fixed = "top">
@@ -48,6 +52,7 @@ class Navigator extends Component {
                 </Nav>
                 <Navbar.Text>Greetings</Navbar.Text>
                 <SignOut />
+
             </Navbar.Collapse>
         </Navbar>
     )
